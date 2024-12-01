@@ -1,0 +1,139 @@
+id,title,selftext,score,num_comments,author,created_utc,url,upvote_ratio,over_18,edited,spoiler,stickied
+1h43gno,How did you learn data modeling?,"I’ve been a data engineer for about a year and I see that if I want to take myself to the next level I need to learn data modeling.
+
+One of the books I researched on this sub is The Data Warehouse Toolkit which is in my queue. I’m still finishing Fundamentals of Data Engineering book. 
+
+And I know experience is the best teacher. I’m fortunate with where I work, but my current projects don’t require data modeling. 
+
+So my question is how did you all learn data modeling? Did you request for it on the job? Or read the book then implemented them?",102,41,imperialka,2024-12-01 13:38:23,https://www.reddit.com/r/dataengineering/comments/1h43gno/how_did_you_learn_data_modeling/,1.0,False,False,False,False
+1h3p9o8,Medium Blog Subscription - Is it worth it?,I have been more interested in reading Data Engineering blogs recently and find some good ones on Medium. Some are only member viewership though. Is this worth the $50 a year or is there better sites/free sources for DE blogs.,37,34,eastieLad,2024-11-30 23:22:01,https://www.reddit.com/r/dataengineering/comments/1h3p9o8/medium_blog_subscription_is_it_worth_it/,0.79,False,False,False,False
+1h3xo21,Might be a stupid question,"I manage a bunch of data pipelines in my company. They are all python scripts which do ETL, all our DBs are in postgres. 
+
+When I read online about ETL tools, I come across tools like dbt which do data ingestion. What does it really offer compared to just running insert queries from python?",32,17,waguwaguwagu,2024-12-01 07:04:06,https://www.reddit.com/r/dataengineering/comments/1h3xo21/might_be_a_stupid_question/,0.97,False,False,False,False
+1h47qv8,Quarterly Salary Discussion - Dec 2024,"https://preview.redd.it/ia7kdykk8dlb1.png?width=500&format=png&auto=webp&s=5cbb667f30e089119bae1fcb2922ffac0700aecd
+
+This is a recurring thread that happens quarterly and was created to help increase transparency around salary and compensation for Data Engineering.
+
+# [Submit your salary here](https://tally.so/r/nraYkN)
+
+You can view and analyze all of the data on our [DE salary page](https://dataengineering.wiki/Community/Salaries) and get involved with this open-source project [here](https://github.com/data-engineering-community/data-engineering-salaries).
+
+&#x200B;
+
+If you'd like to share publicly as well you can comment on this thread using the template below but it will not be reflected in the dataset:
+
+1. Current title
+2. Years of experience (YOE)
+3. Location
+4. Base salary & currency (dollars, euro, pesos, etc.)
+5. Bonuses/Equity (optional)
+6. Industry (optional)
+7. Tech stack (optional)",10,3,AutoModerator,2024-12-01 17:00:30,https://www.reddit.com/r/dataengineering/comments/1h47qv8/quarterly_salary_discussion_dec_2024/,0.92,False,False,False,True
+1h4au7y,How can I grow as an engineer without good seniors to learn from?,"I am a fresh graduate data engineer working at a small company in the oil and drilling industry.
+
+I was hired 6 months ago as a freelance data engineer, and after proving myself through my work quality, I am now essentially functioning as a tech lead, with full responsibility and ownership of designing, implementing, and hiring for the projects I'm assigned.
+
+Our company is not a tech company, so I only have a couple of tech-oriented colleagues, and I barely interact with them. Now I directly report to the director of the company, who in all senses is awesome, with 40+ years of combined experience in some of the biggest oil and drilling companies globally.
+
+However, I have some strong FOMO about not being able to learn much technical stuff from my peers or seniors. I am trying my best to learn and pick things up on my own, learning design principles, getting code reviews from chatGPT, etc. But even then, I'm afraid I am not producing the software to the highest standards of the industry since we don't have any rigorous cross-checking, and might be missing out on a lot of learning.
+
+Can someone who has been in positions similar to these please guide me?",14,16,Psg303,2024-12-01 19:11:44,https://www.reddit.com/r/dataengineering/comments/1h4au7y/how_can_i_grow_as_an_engineer_without_good/,0.89,False,False,False,False
+1h3pwt3,Etl tool reference needed help!!!,"I am changing my ETL from pentaho kettle since they want to update the data stack.
+
+
+We move data from Mysql to Postgres data warehouse but we need version control, and good  unit testing, and able to trigger real time updates and incremental with daily loads during the day.
+
+Some say DBT with airflow can handle it and still be a cheap alternative.
+
+Let me know if I am on the right path or there are better options.
+
+Thanks in advance",7,5,krazykid18,2024-11-30 23:53:22,https://www.reddit.com/r/dataengineering/comments/1h3pwt3/etl_tool_reference_needed_help/,0.78,False,False,False,False
+1h3l429,Set up a Data Stack,"Hello everyone,
+
+My company is looking to set up a data stack to meet analytical and business needs, providing dashboards to their clients, mainly through Tableau Cloud.
+
+The budget is quite limited, and some data needs to remain in Europe, so if I can stick to open-source solutions, that would be ideal.
+
+Currently, their data is mainly stored on an OVH S3, ElasticSearch, and relational databases like Postgres and MySQL.
+
+The data volume is currently just over 4TB. This is expected to increase, but I’m not sure by how much (at least 2TB/year, but it could well be more than 10). Ideally, we’ll need infrastructure that can scale.
+
+I thought about consolidating the data in the S3 and trying to transform it into a lakehouse, using Trino/ Presto as the query engine, DBT for the transformation part, and then re-storing the transformed data in S3 in Parquet format.
+
+At the moment, I’m processing the data via Python scripts. I had tight deadlines for some deliverables, and since I’m efficient with Python, I used it. But I think it would be better and more efficient to work directly with the database using SQL. Several people in my company know SQL, but I’m the only one who knows Python.
+
+However, some processes aren’t necessarily “obvious” to do in SQL without using recursive CTEs, functions like `generate_series`, lagging data, storing variables, or performing bulk updates, inserts, and deletes. There will be a table over 1TB (there are always solutions to partition, but it’s something to keep in mind).
+
+In these situations, I’m not sure if the combination of S3 + Trino is suitable. (Edit: + Iceberg)
+
+I’m thinking Postgres might work, but it’s not really designed for OLAP, and if the data volume explodes, it won’t scale well.
+
+I’m also not sure if ClickHouse would be efficient for complex queries involving recursion, as they can only be done with nested queries and temporary tables, which could be cumbersome.
+
+I’m not sure what the best solution would be for a reasonable cost (for example, having a server with Postgres/ClickHouse on it wouldn’t be a problem).
+
+Could you please advise me ?",5,7,bibilerikiki,2024-11-30 20:07:57,https://www.reddit.com/r/dataengineering/comments/1h3l429/set_up_a_data_stack/,0.79,False,False,False,False
+1h46z2r,How Do You Tackle Massive Image Storage & Processing?,"Hello everyone!! Been fascinated lately by how companies handle massive amounts of image data. The numbers I'm seeing are pretty wild!
+
+For those working with large-scale image storage and processing - what's your setup like? How do you handle processing pipelines for all this data? How do you balance keeping costs reasonable while still having quick access for processing? What are the biggest challenges you've faced with storage or processing speed? Any clever solutions you've discovered along the way?
+
+Super curious to hear about your experiences!",5,4,Investorator3000,2024-12-01 16:26:31,https://www.reddit.com/r/dataengineering/comments/1h46z2r/how_do_you_tackle_massive_image_storage_processing/,1.0,False,False,False,False
+1h47bot,How Can I Transition from a BI Analyst in Insurance to a Geospatial Data Engineer?,"I'm currently a Business Intelligence Analyst in the insurance industry with a five years of experience working as an analyst for three different domains. I've been in the insurance industry for three of those years. My day-to-day involves working with SQL, Excel, Power BI, and R//Python, focusing on creating dashboards, analyzing policy data, and uncovering trends for business decision-making. While I enjoy my current role, I've recently become fascinated with geospatial data and its applications. An extension of my role is working with GIS data that pertains to our property exposure and weather perils that mat effect them. One of my contributions has been building a pipeline importing hail swaths to our repository and developing reports over our membership each morning. I find working and creating pipelines with geospatial data far more interesting than my other responsibilities in this role.
+
+I want to pivot my career to become a Geospatial Data Engineer, but I’m not entirely sure where to start. Here’s what I’ve already been doing:
+
+1. **Skills I Currently Have:**
+   * Proficient in SQL for data manipulation and extraction.
+   * Experienced with visualization tools like Power BI.
+   * Decent understanding of Python and R for analytics.
+   * Familiarity with insurance data and workflows.
+2. **What I’m Exploring:**
+   * Learning about GIS software like ArcGIS Pro and QGIS.
+   * Exploring Python libraries like GeoPandas and Shapely.
+   * Experimenting with spatial visualizations and map-based dashboards.
+3. **My Questions:**
+   * What specific technical skills or tools should I focus on mastering to transition into geospatial engineering?
+   * How can I leverage my BI and insurance background in this new field?
+   * Are there any certifications or courses you'd recommend for someone making this shift?
+   * What kind of entry-level roles or projects should I look for to start building relevant experience?
+
+I’d love to hear from anyone who has made a similar transition or works in geospatial data! Any advice, resource recommendations, or insights would be hugely appreciated. Thanks in advance!",3,8,raz_the_kid0901,2024-12-01 16:42:10,https://www.reddit.com/r/dataengineering/comments/1h47bot/how_can_i_transition_from_a_bi_analyst_in/,0.67,False,False,False,False
+1h46l7v,Scala Projects/Learning,"So, I want to make a jump soon to try and get into tech to work on a more advanced engineering team that deals with bigger data, more complex business use cases, and more $ lol. For context, I have a little under 4yoe in BI/DE, and am very proficient at SQL, ~okay~ at python, and manage our cloud infra. I plan on preparing for the next 6mo-1yr, will be doing my DSA study in python and have built a few python based projects for standard DE use cases as well as some algo trading bots - so I think I'm generally covered on those requirements. 
+
+I'm seeing scala mentioned a lot as a job requirement and as a common language used at DE jobs but also hear often (esp on this sub) that custom scala pipelines are really only necessary when your pipelines are moving data on a >1tb per day cadence (or just relatively a lot of data). If this is the case, how did you guys learn Scala off the job and what projects are you building with it if it's overkill in relation to the data you're dealing with? I haven't had the use case for it at work, but if it's a requirement at a lot of these jobs I want to know what could be a good project if I want to replicate the complexity of a production scala pipeline - ideally without having to store a ton of data on my machine or pay for it in the cloud. If you've built a project with it or have any ideas - I'd love to hear what you've built. Thank you!",4,7,Casdom33,2024-12-01 16:09:05,https://www.reddit.com/r/dataengineering/comments/1h46l7v/scala_projectslearning/,1.0,False,False,False,False
+1h47r16,Monthly General Discussion - Dec 2024,"This thread is a place where you can share things that might not warrant their own thread. It is automatically posted each month and you can find previous threads in the collection.
+
+Examples:
+
+* What are you working on this month?
+* What was something you accomplished?
+* What was something you learned recently?
+* What is something frustrating you currently?
+
+As always, sub rules apply. Please be respectful and stay curious.
+
+**Community Links:**
+
+* [Monthly newsletter](https://dataengineeringcommunity.substack.com/)
+* [Data Engineering Events](https://dataengineering.wiki/Community/Events)
+* [Data Engineering Meetups](https://dataengineering.wiki/Community/Meetups)
+* [Get involved in the community](https://dataengineering.wiki/Community/Get+Involved)",3,0,AutoModerator,2024-12-01 17:00:40,https://www.reddit.com/r/dataengineering/comments/1h47r16/monthly_general_discussion_dec_2024/,1.0,False,False,False,True
+1h490vc,Interested in Data Engineering/ Analytics ,"Hi all - I'm interested in getting into tech and was looking into a master's in Data Analytics- i have no technical experience or background... I want to know what are the very basics that I would need to know and learn to be successful in the program and finding success after the program is complete surrounding job placement ? Any suggestions and advice ? 
+",2,4,TrojanHorse678,2024-12-01 17:54:48,https://www.reddit.com/r/dataengineering/comments/1h490vc/interested_in_data_engineering_analytics/,0.75,False,False,False,False
+1h4a9j9,Citibank Superday,"Just wondering if anybody would know why type of questions are asked during citi super day for an entry level DE position. 
+
+",1,0,AdIndividual4909,2024-12-01 18:47:26,https://www.reddit.com/r/dataengineering/comments/1h4a9j9/citibank_superday/,1.0,False,False,False,False
+1h40cfz,Is Modin on Ray production stable?,We came across Modin while looking for a transparent Pandas plugin for processing data frames of any size and are wondering whether it is already being used in medium and large companies. What are your experiences? Is Modin on Ray production stable?,1,5,ButterscotchBulky320,2024-12-01 10:17:57,https://www.reddit.com/r/dataengineering/comments/1h40cfz/is_modin_on_ray_production_stable/,0.6,False,False,False,False
+1h3x8qx,Offer as Data Engineer with Potential Extended Probationary Period,"I got an offer as a DE, switching from DA. In the employment contract for the probationary period, it states that the probationary period may be extended in case of performance concerns. HR mentioned that 98% of probationary periods are successfully passed.
+
+What do you think of that? Should I be concerned? 
+",1,5,Ok_Discipline3753,2024-12-01 06:34:58,https://www.reddit.com/r/dataengineering/comments/1h3x8qx/offer_as_data_engineer_with_potential_extended/,0.54,False,False,False,False
+1h4ajpu,How to move all data in Dynamics365 CRM into Python? ,"Hi, for context: I'm a data analyst and I was assigned some reporting in Power BI and ML projects in Python. I need to get our CRM data into python, perform some transformations and run the models, then upload back to OneDrive to create the dashboard with the cleaned data (I prefer to leave PBI only as a Viz tool and nothing more, I want all transformations in Python) in Power BI. 
+
+But first I need to access the CRM data directly in Python, has someone done something like this? I'll appreciate if you could shed some light
+
+Thanks for the help!",0,11,Bavender-Lrown,2024-12-01 18:59:35,https://www.reddit.com/r/dataengineering/comments/1h4ajpu/how_to_move_all_data_in_dynamics365_crm_into/,0.5,False,False,False,False
+1h4bhss,Looking for a Job,"Hi All,I resigned from my current job and looking for a new role.Pls help in referalls,as i was stucked in a support role in data engineering and neither i was getting money nor growth and learning, i resigned and looking forward to join other company.I am not good at DSA does it a necessary requirement to know DSA ,Nowadays  
+JD's are like they are hiring a single guy who can do everything from extraction to reporting.  
+If anyone is preparing for interviews is welcome we can connect and learn and can practice mock interviews.  
+\#jobs#DataEngineers",0,2,FabulousWerewolf7339,2024-12-01 19:39:17,https://www.reddit.com/r/dataengineering/comments/1h4bhss/looking_for_a_job/,0.14,False,False,False,False
